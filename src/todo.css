@@ -87,7 +87,6 @@ h2 {
 
 .btn-24 {
     -webkit-tap-highlight-color: transparent;
-    -webkit-appearance: button;
     background-color: #000;
     background-image: none;
     color: #fff;
@@ -96,7 +95,6 @@ h2 {
     font-weight: 400;
     line-height: 1.5;
     margin: 0;
-    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
     padding: 0;
     text-transform: uppercase;
 }
@@ -111,7 +109,6 @@ h2 {
 
 .btn-24 svg {
     display: block;
-    vertical-align: middle;
 }
 
 .btn-24 [hidden] {
