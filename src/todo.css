@@ -1,0 +1,278 @@
+h2 {
+    text-transform: uppercase;
+}
+
+.form {
+    width: 100%;
+}
+
+.form-input .input {
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    background-color: #f5f6fd;
+    border: 1px solid #ccc;
+    padding: 7px 14px 9px;
+    transition: 0.4s;
+}
+
+.form-input .input:focus {
+    outline: none;
+}
+
+.form-input {
+    width: 70%;
+    margin: 40px 3%;
+    position: relative;
+    display: inline-block;
+}
+
+.form-input .input~.focus-border:before,
+.form-input .input~.focus-border:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 1.5px;
+    background-color: #000000;
+    transition: 0.4s;
+}
+
+.form-input .input~.focus-border:after {
+    top: auto;
+    bottom: 0;
+}
+
+.form-input .input~.focus-border i:before,
+.form-input .input~.focus-border i:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1.7px;
+    height: 0;
+    background-color: #000000;
+    transition: 0.6s;
+}
+
+.form-input .input~.focus-border i:after {
+    left: auto;
+    right: 0;
+}
+
+.form-input .input:focus~.focus-border:before,
+.form-input .input:focus~.focus-border:after {
+    left: 0;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.form-input .input:focus~.focus-border i:before,
+.form-input .input:focus~.focus-border i:after {
+    top: 0;
+    height: 100%;
+    transition: 0.6s;
+}
+
+.btn-24,
+.btn-24 *,
+.btn-24 :after,
+.btn-24 :before,
+.btn-24:after,
+.btn-24:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-24 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.btn-24:disabled {
+    cursor: default;
+}
+
+.btn-24:-moz-focusring {
+    outline: auto;
+}
+
+.btn-24 svg {
+    display: block;
+    vertical-align: middle;
+}
+
+.btn-24 [hidden] {
+    display: none;
+}
+
+.btn-24 {
+    --background: #000;
+    background: none;
+    overflow: hidden;
+    padding: 0.7rem 3rem;
+    position: relative;
+}
+
+.btn-24 span {
+    display: block;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.btn-24:after,
+.btn-24:before {
+    --tilt: 20px;
+    background: #fff;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: -webkit-clip-path 0.2s ease;
+    transition: clip-path 0.2s ease;
+    transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
+    width: 100%;
+    z-index: -1;
+}
+
+.btn-24:after {
+    --thickness: 5px;
+    background: var(--background);
+    height: calc(100% - var(--thickness) * 2);
+    left: var(--thickness);
+    top: var(--thickness);
+    width: calc(100% - var(--thickness) * 2);
+}
+
+.btn-24:hover span {
+    transform: translateX(-20px);
+}
+
+.btn-24:hover:after,
+.btn-24:hover:before {
+    -webkit-clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 50%, calc(100% - var(--tilt)) 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 50%, calc(100% - var(--tilt)) 100%, 0 100%);
+}
+
+.todo-list {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.todo-list ul {
+    width: 80%;
+}
+
+.todo-list ul li {
+    list-style-type: none;
+    text-align: left;
+    background-color: #d8d8d860;
+    padding: 5px 3px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.wrap-delete * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.actions {
+    display: inline-flex;
+    margin-right: 10px;
+}
+
+.button-delete,
+.button-edit,
+.button-save {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.wrap-delete button,
+.wrap-edit button,
+.wrap-save button {
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    margin-right: 5px;
+}
+
+.wrap-delete button {
+    background: #e62222;
+}
+
+.wrap-edit button,
+.wrap-save button {
+    background: #000;
+    /* same background color as .btn-24 */
+}
+
+.wrap-delete button:hover {
+    background: #f84d4d;
+}
+
+.wrap-edit button:hover,
+.wrap-save button:hover {
+    background: #333;
+    /* darker shade for hover effect */
+}
+
+.wrap-delete .trash-icon,
+.wrap-edit .edit-icon,
+.wrap-save .save-icon {
+    font-size: 22px;
+    text-align: center;
+    align-items: center;
+}
+.wrap-edit .edit-icon, 
+.wrap-save .save-icon{
+    color: white;
+}
+
+.input-edit {
+    width: 70%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    background-color: #f5f6fd;
+    border: 1px solid #ccc;
+    padding: 7px 14px 9px;
+    transition: 0.4s;
+}
+
+.input-edit:focus {
+    outline: none;
+}
