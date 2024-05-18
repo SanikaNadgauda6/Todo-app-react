@@ -9,6 +9,7 @@ const Todo = () => {
     const [editId, setEditId] = useState(null);
     const [editTitle, setEditTitle] = useState("");
 
+    //fetch the todos from api & add it to the state
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/todos')
             .then((res) => res.json())
@@ -17,6 +18,7 @@ const Todo = () => {
             });
     }, []);
 
+    //deleting the specific todo using the id.
     const handleDelete = (id) => {
         console.log("Deleting this item", id);
         alert("Are you sure you want to delete the todo?");
@@ -26,12 +28,12 @@ const Todo = () => {
             setTodos(todos.filter(todo => todo.id !== id));
         });
     }
-
+    //editing the todo. 
     const handleEdit = (todo) => {
         setEditId(todo.id);
         setEditTitle(todo.title);
     }
-
+    //after editing the todo, handle save 
     const handleSaveEdit = (id) => {
         const updatedTodos = todos.map(todo => {
             if (todo.id === id) {
@@ -43,7 +45,7 @@ const Todo = () => {
         setEditId(null);
         setEditTitle("");
     }
-
+    // add a new todo to the list
     const handleAddTodo = () => {
         if (newTodo.trim() === "") return;
         
